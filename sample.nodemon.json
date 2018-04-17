@@ -1,0 +1,5 @@
+{
+	"env": {
+		"MONGO_ATLAS_PASSWORD": "put your password from mongod atlas"
+	}
+}
