@@ -7,7 +7,8 @@ const Product = require('../models/product');
 
 router.get('/', (req, res, next) => {
 	Order.find()
-	.select('product quantity _id')
+		.select('product quantity _id')
+		.populate('product')
 		.exec()
 		.then(result => {
 			res.status(200).json({
@@ -58,9 +59,7 @@ router.post('/', (req, res, next) => {
 			res.status(500).json({
 				error: err
 			});
-		});	
-		
-
+		});
 });
 
 router.get('/:orderId', (req, res, next) => {
