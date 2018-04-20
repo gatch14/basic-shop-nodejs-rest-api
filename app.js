@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./shop/routes/products');
 const orderRoutes = require('./shop/routes/orders');
+const userRoutes = require('./shop/routes/user');
 
 mongoose.connect('mongodb://gatch-shop:' +
 	process.env.MONGO_ATLAS_PASSWORD +
@@ -34,6 +35,7 @@ app.use((req, res, next) => {
 // Routes
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes);
 
 app.use((req, res, next) => {
 	const error = new Error('Not found');
