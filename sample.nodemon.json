@@ -1,5 +1,6 @@
 {
 	"env": {
-		"MONGO_ATLAS_PASSWORD": "put your password from mongod atlas"
+		"MONGO_ATLAS_PASSWORD": "put your password from mongod atlas",
+		"JWT_KEY": "put_a_secret_key"
 	}
 }
