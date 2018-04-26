@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const User = require('../models/user');
+const User = require('./models');
 
 exports.userSignup = (req, res, next) => {
 	User.find({ email: req.body.email })
@@ -103,3 +103,4 @@ exports.userDeleteUser = (req, res, next) => {
 			});
 		});	
 };
+

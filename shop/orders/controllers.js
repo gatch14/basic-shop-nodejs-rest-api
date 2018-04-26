@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const Order = require('../models/order');
-const Product = require('../models/product');
+const Order = require('./models');
+const Product = require('../products/models');
 
 exports.ordersGetAll = (req, res, next) => {
 	Order.find()

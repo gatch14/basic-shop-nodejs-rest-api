@@ -4,9 +4,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const productRoutes = require('./shop/routes/products');
-const orderRoutes = require('./shop/routes/orders');
-const userRoutes = require('./shop/routes/user');
+const productRoutes = require('./shop/products/routes');
+const orderRoutes = require('./shop/orders/routes');
+const userRoutes = require('./shop/users/routes');
 
 mongoose.connect('mongodb://gatch-shop:' +
 	process.env.MONGO_ATLAS_PASSWORD +
